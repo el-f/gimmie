@@ -1,0 +1,29 @@
+# gimmie settings. Restart start.py after a change.
+
+# Local port for copyparty; it listens on 127.0.0.1 only. Integer from 1 to 65535.
+port = 3923
+
+# Folder that receives uploads; it is created when missing.
+# A relative path starts from the folder that holds this file.
+incoming_dir = "incoming"
+
+# Browser login. false: password only. true: username and password.
+require_username = false
+
+# Accounts: one [[users]] block each. Add more blocks as needed.
+# Keep at least one "admin" and one "upload" account.
+#
+# role      "admin": browse, download and upload. "upload": upload only.
+# username  1-64 ASCII letters, digits, _ . or -. Unique, ignoring case. "leeloo_dallas" is reserved.
+# password  Optional. Leave it out to get a new random password every run.
+#           Set it to keep the same password every run; it is stored here as plain text.
+#           With require_username = false, every account needs a different password.
+#           No control characters, no space at the start or end, and no two spaces followed by #.
+
+[[users]]
+role = "admin"
+username = "owner"
+
+[[users]]
+role = "upload"
+username = "guest"

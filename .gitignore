@@ -1,0 +1,7 @@
+.gimmie/
+__pycache__/
+incoming/
+*.pyc
+/cloudflared
+/cloudflared.exe
+/copyparty-sfx.py
